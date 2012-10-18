@@ -106,7 +106,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
     padding-bottom: 1%;
     background-color:#D3EEFF;
     width:300px;
-        
+    border-radius: 25px;    
 }
 
 #forms1 h3{
@@ -127,7 +127,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
     padding-bottom: 1%;
     background-color:#D3EEFF;
     width:200px;
-        
+    border-radius: 25px;  
 }
 
 
