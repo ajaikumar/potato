@@ -12,8 +12,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
 
 }
 
+#appsud-img{
+    z-index: 1;
+    position: absolute;
+    margin-left: 163px;
+    margin-top: 22px;
+}
+#UI-tabs{
+    margin-left: 41px;
+}
 #tabs{
 	margin-top: 132px;
+    margin-left: 120px;
 }
 
 .boldness{
@@ -23,7 +33,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
 
 #ratings{
 	margin-top: 30px;
-	margin-left: 0px;
+	margin-left: 163px;
 }
 
 #desired-apps{
@@ -34,11 +44,45 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
 	color: #FFFFFF;
 	float: right;
     margin-top: 30px;
-    margin-right: 60px;
+    margin-right: 117px;
     padding: 40px;
 }
 
+#specpage{
+    position:absolute;
+    float:left;
+    width:200px;
+    margin-top:5%;
+}
 
+#specpage h3{
+    font-family: tahoma;
+    font-weight: bold;
+}
+
+#specpage hr{
+    width:700px;
+    color:;
+    margin:0;
+}
+
+#editpagehead{
+    position:absolute;
+    float:left;
+    width:200px;
+    margin-top:2%;
+}
+
+#editpagehead h3{
+    font-family: tahoma;
+    font-weight: bold;
+}
+
+#editpagehead hr{
+    width:700px;
+    color:;
+    margin:0;
+}
 
 #leftpanel{
     float:left;
@@ -106,7 +150,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
     padding-bottom: 1%;
     background-color:#D3EEFF;
     width:300px;
-    border-radius: 25px;    
+        
 }
 
 #forms1 h3{
@@ -119,7 +163,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
 #forms2 {
     position:absolute;
     float: none;
-    margin-left: 500px!important;
+    margin-left: 400px!important;
     margin-top: 20px;
     padding-top:0%;
     padding-left:2%;
@@ -127,7 +171,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
     padding-bottom: 1%;
     background-color:#D3EEFF;
     width:200px;
-    border-radius: 25px;  
+        
 }
 
 
@@ -140,6 +184,39 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
     color:#007DF1;
 }
 
+#forms3 {
+    position:absolute;
+    float: none;
+    margin-left: 400px!important;
+    margin-top: 35px;
+    padding-top:0%;
+    padding-left:2%;
+    padding-right: 4%;
+    padding-bottom: 1%;
+    background-color:#D3EEFF;
+    width:200px;
+        
+}
+
+
+#forms3 h3{
+    font-family: "Myriad web pro";
+    font-size: 20px;
+    text-align: center;
+    color:#007DF1;
+}
+
+#photoupload{
+    position:absolute;
+    float: none;
+    margin-left: 20px;
+    margin-top: 35px;
+    width:200px;
+    height:200px;
+}
+
+
+
 #terms {
     float:left;
     font-family: "myriad web pro";
@@ -151,11 +228,45 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
 
 #userapps{
     position:absolute;
-    float:right;
+    float:left;
     width: 75%;
-    margin-left:0px;
-    margin: 300px;
+    height:auto;
+    margin-top: 30%;
+    margin-bottom: 300px;
+    margin-left:2%;
+    }
+    
+#userapps h3{
+    font-family: tahoma;
+    font-size: 30px;
 }
+
+#userapps hr{
+    width:75%!important;
+    position:inherit;
+    
+}
+
+
+.useropt{
+    width: 80px;
+    height: 30px;
+    float: right;
+    
+}
+#useropt ul{
+    display:inline;
+} 
+
+
+#useropt p{
+    font-family: "myriad web pro";
+    font-size: 12pt;
+    color:#309CFF;
+}
+
+
+
 
 #footnav{
     font-family: tahoma;
@@ -185,4 +296,5 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
     height:.9px; color:#DADADA;
     background-color: #DADADA; 
     border: none;
+    padding-bottom: 0;
 }

@@ -22,9 +22,9 @@ $obj->connect;
   <meta name="description" content="">
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link href="css/bootstrap-responsive.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <!-- More ideas for your head here: h5bp.com/d/head-Tips -->
   
@@ -45,11 +45,12 @@ $obj->connect;
   <![endif]-->
 <div id="sf-wrapper"> 
   	<header>
+      <img src="img/Logo_appsud.png" id="appsud-img">
     <div>
     <label id="desired-apps">Get Desired Mobile Apps</label>
 	</div>
   		<div class="navbar navbar-static-top" id="header-container">
-  			<div class="container">
+  			<div class="container" id="UI-tabs">
   				<div id="tabs">
   					<ul class="nav">
   						<li><a href="#"><span class="boldness">Apps</span></a></li>
@@ -61,4 +62,12 @@ $obj->connect;
   			</div>
   		</div>
   	</header>
-</div>
+    <div id="ratings" class="navbar span12 offset1">
+      <ul class="nav">
+      <li class="divider-vertical"><a href="#">Top Rated</a></li>
+      <li class="divider-vertical"><a href="#">Most Downloaded</a></li>
+      <li class="divider-vertical"><a href="#">Top New</a></li>
+      <li class="divider-vertical"><a href="#">Forum</a></li>
+      </ul>
+    </div>
+  </div>
