@@ -17,11 +17,11 @@ if($_SESSION['username'])
                 <table border="0">
                 <form action='action/editpro_action.php' method='post'>
                 <input id="SnapHostID" name="SnapHostID" type="hidden" value="7TLQ3DQP68GP" />
-                <tr><td>First Name<input id="firstname" type="text" name="firstname" value="<?php echo $rows['firstname']; ?>" size="20"></td></tr>
-                <tr><td>Last Name<input id="lastname" type="text" name="lastname" value="<?php echo $rows['lastname']; ?>" ></td></tr>
-                <tr><td>Country<input id="country" type="text" value="<?php echo $rows['country']; ?>" name="country"></td></tr>
-                <tr><td>Phone<input id="phone" type="text" value="<?php echo $rows['phone']; ?>" name="phone"></td></tr>
-                <tr><td>Website / Online Profile<input  id="website" type="text" value="<?php echo $rows['website']; ?>" name="website"></td></tr>
+                <tr><td>First Name<input id="firstname" type="text" name="firstname" value="<?php echo isset($rows['firstname'])?$rows['firstname']:''; ?>" size="20"></td></tr>
+                <tr><td>Last Name<input id="lastname" type="text" name="lastname" value="<?php echo isset($rows['lastname'])?$rows['lastname']:''; ?>" ></td></tr>
+                <tr><td>Country<input id="country" type="text" value="<?php echo isset($rows['country'])?$rows['country']:''; ?>" name="country"></td></tr>
+                <tr><td>Phone<input id="phone" type="text" value="<?php echo isset($rows['phone'])?$rows['phone']:''; ?>" name="phone"></td></tr>
+                <tr><td>Website / Online Profile<input  id="website" type="text" value="<?php echo isset($rows['website'])?$rows['website']:''; ?>" name="website"></td></tr>
                 <tr><td><input id="submit" type="submit" name="update" value="Update"></td></tr>
                 </form>
                 </table>

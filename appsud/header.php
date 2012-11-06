@@ -3,7 +3,7 @@ ob_start();
 session_start();
 include('model/allclasses.php');
 $obj=new connection();
-$obj->connect;
+//$obj->connect;
 ?>
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->

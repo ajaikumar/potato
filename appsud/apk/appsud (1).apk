@@ -1,0 +1,79 @@
+-- phpMyAdmin SQL Dump
+-- version 3.4.10.1deb1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Nov 03, 2012 at 12:12 AM
+-- Server version: 5.5.24
+-- PHP Version: 5.3.10-1ubuntu3.3
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `appsud`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `app_apk`
+--
+
+CREATE TABLE IF NOT EXISTS `app_apk` (
+  `apk_id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `reg_id` bigint(11) NOT NULL,
+  `app_name` varchar(50) NOT NULL,
+  `app_id` int(50) NOT NULL,
+  `app_version` varchar(50) NOT NULL,
+  `app_type` varchar(50) NOT NULL,
+  `app_license` varchar(50) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  `apk_name` varchar(100) NOT NULL,
+  PRIMARY KEY (`apk_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `app_apk`
+--
+
+INSERT INTO `app_apk` (`apk_id`, `reg_id`, `app_name`, `app_id`, `app_version`, `app_type`, `app_license`, `description`, `apk_name`) VALUES
+(1, 16, 'asdfa', 1221, '232', '1', '1', 'sdfsf', 'app.apk'),
+(2, 16, 'asdfa', 1, '2', '1', '1', 'sdf', 'PSD.apk');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `app_register`
+--
+
+CREATE TABLE IF NOT EXISTS `app_register` (
+  `reg_id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(50) NOT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `usertype` varchar(50) NOT NULL,
+  `country` varchar(50) NOT NULL,
+  `phone` varchar(50) NOT NULL,
+  `website` varchar(50) NOT NULL,
+  PRIMARY KEY (`reg_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+
+--
+-- Dumping data for table `app_register`
+--
+
+INSERT INTO `app_register` (`reg_id`, `firstname`, `lastname`, `username`, `email`, `password`, `usertype`, `country`, `phone`, `website`) VALUES
+(16, 'ajai', 'kumark', 'ajai', 'ajai.sreyas@gmail.com', 'aa', '1', 'India', '9961976456', 'myscribles.in');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

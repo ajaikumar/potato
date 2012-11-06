@@ -1,12 +1,17 @@
-<?php
+﻿<?php
 include('header.php');
 $b=new connection;
 $b->connect();
+$msg='';
+if(isset($_REQUEST['msg']))
+{
 $msg = $_REQUEST['msg'];
+}
 if($msg == '')
 {
   session_destroy();
 }
+
 ?>
 
 
@@ -32,7 +37,7 @@ if($msg == '')
 
 <table border="0">
 <form method="POST" action="action/loginauth.php">
-<tr><td>Username</td><td>:</td><td><input type="text" name="uname" size="20" value="<?php echo $_SESSION['uname']; ?>"></td></tr>
+<tr><td>Username</td><td>:</td><td><input type="text" name="uname" size="20" value="<?php echo isset($_SESSION['uname'])?$_SESSION['uname']:''; ?>"></td></tr>
 <tr><td>Password</td><td>:</td><td><input type="password" name="pass"></td></tr>
 <tr><td>&nbsp;</td><td>&nbsp;</td><td><input type="submit" value="Login" class="btn btn-primary" name="login"></td></tr>
 </form>
@@ -46,8 +51,8 @@ if($msg == '')
 
             <table border="0">
             <form method="POST" action="action/loginauth.php">
-            <tr><td>Username<input type="text" name="username" size="20" value="<?php echo $_SESSION['username'] ?>"></td></tr>
-            <tr><td>Email<input type="text" name="emailid" value="<?php echo $_SESSION['email'] ?>"></td></tr>
+            <tr><td>Username<input type="text" name="username" size="20" value="<?php echo isset($_SESSION['username'])?$_SESSION['username']:''; ?>"></td></tr>
+            <tr><td>Email<input type="text" name="emailid" value="<?php echo isset($_SESSION['email'])?$_SESSION['email']:'' ?>"></td></tr>
             <tr><td>New Password<input type="password" name="password" ></td></tr>
             <tr><td>Retype Password<input type="password" name="re_password"></td></tr>
             <tr><td>Company/IndividualDeveloper<select name="usertype"> 
@@ -55,9 +60,9 @@ if($msg == '')
   <option value="1" >Individual</option>
   <option value="2" >Company</option>
   </select></p></td></tr>
-            <tr><td>Country<input type="text" name="country" value="<?php echo $_SESSION['country'] ?>"></td></tr>
-            <tr><td>Phone<input type="text" name="phone" value="<?php echo $_SESSION['phone'] ?>"></td></tr>
-            <tr><td>Website<input type="text" name="website" value="<?php echo $_SESSION['website'] ?>"></td></tr>
+            <tr><td>Country<input type="text" name="country" value="<?php echo isset($_SESSION['country'])?$_SESSION['country']:'' ?>"></td></tr>
+            <tr><td>Phone<input type="text" name="phone" value="<?php echo isset($_SESSION['phone'])?$_SESSION['phone']:'' ?>"></td></tr>
+            <tr><td>Website<input type="text" name="website" value="<?php echo isset($_SESSION['website'])?$_SESSION['website']:'' ?>"></td></tr>
             <tr><td><input type="submit" value="Sign Up" name="signup" class="btn btn-primary"></td></tr>
         </form>
     </table>

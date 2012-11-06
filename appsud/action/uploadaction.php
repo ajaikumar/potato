@@ -7,7 +7,6 @@ $b->connect();
 if(isset($_POST['upload']))
 {
 	$appname = $_POST['apps'];
-	$appid = $_POST['appid'];
 	$version = $_POST['version'];
 	$apptype = $_POST['apptype'];
 	$license = $_POST['license'];
@@ -16,11 +15,6 @@ if(isset($_POST['upload']))
 	if($appname == '')
 	{
 		$msg="Enter appname";	
-		$a=0;
-	}
-	elseif ($appid == '') 
-	{
-		$msg="Enter appid";	
 		$a=0;
 	}
 	elseif ($version == '') 
@@ -85,8 +79,9 @@ if(isset($_POST['upload']))
 			header('location:../upload_file.php?msg='.$msg);
 			exit();
 		}
-		$insert =$b->insert("app_apk","reg_id,app_name,app_id,app_version,app_type,app_license,description,apk_name","'$id','$appname','$appid','$version','$apptype','$license','$description','$apkname'");
-		header('location:../upload_file.php?msg='.$msg);
+		$insert =$b->insert("app_apk","reg_id,app_name,app_version,app_type,app_license,description,apk_name","'$id','$appname','$version','$apptype','$license','$description','$apkname'");
+		$id = mysql_insert_id();
+		header('location:../confirm_upload.php?id='.$id);
 
 		
 	}

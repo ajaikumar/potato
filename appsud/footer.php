@@ -37,15 +37,33 @@
 	<div id="hr"></div>
 	<img src="img/vr_line.png" id="vertical-line" />
 	<div id="rightnav">
-		<ul class="nav">
-			<li class="divider-vertical"><a href="#">Applications</a></li>
+		<div class="row">  
+<div class="span3">  
+<ul class="nav nav-tabs nav-stacked">
 			<li class="divider-vertical"><a href="#">Games</a></li>
-			<li class="divider-vertical"><a href="#">Utilities</a></li>
-			<li class="divider-vertical"><a href="#">Latest</a></li>
-			<li class="divider-vertical"><a href="#">Most Downloaded</a></li>
-			<li class="divider-vertical"><a href="#">Most Rated</a></li>
+			<li class="divider-vertical"><a href="#">Social Networking</a></li>
+            <li class="divider-vertical"><a href="#">Music</a></li>
+            <li class="divider-vertical"><a href="#">Entertainment</a></li>
+			<li class="divider-vertical"><a href="#">Navigation / Search</a></li>
+            <li class="divider-vertical"><a href="#">Communication</a></li>
+            <li class="divider-vertical"><a href="#">News</a></li>
+			<li class="divider-vertical"><a href="#">Shopping</a></li>
+            <li class="divider-vertical"><a href="#">Banking / Finance</a></li>
+            <li class="divider-vertical"><a href="#">Dining / Restaurant</a></li>
+            <li class="divider-vertical"><a href="#">Food / Drink</a></li>
+            <li class="divider-vertical"><a href="#">Health</a></li>
+            <li class="divider-vertical"><a href="#">Sports</a></li>
+            <li class="divider-vertical"><a href="#">Productivity</a></li>
+            <li class="divider-vertical"><a href="#">Education / Learning</a></li>
+            <li class="divider-vertical"><a href="#">Travel</a></li>
+            <li class="divider-vertical"><a href="#">Weather</a></li>
+            
+            
+            
 		</ul>
 	</div>
+</div>
+</div>
 </div>
            
            

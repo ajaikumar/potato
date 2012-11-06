@@ -19,7 +19,7 @@ class connection
 				// LIVE SERVER //
 				// LIVE SERVER //
 				$this->hostname 	= 'localhost';
-				$this->dbname 		= 'insurance';
+				$this->dbname 		= 'threads_appsud';
 				$this->db_user 		= 'threads_321afspo';
 				$this->db_password 	= 'vd#nJzo9~yeX';
 			}
