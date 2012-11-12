@@ -1,5 +1,6 @@
 <?php
 include('header.php');
+session_start();
 $b=new connection;
 $b->connect();
 $msg = $_REQUEST['msg'];
@@ -7,6 +8,7 @@ $id = $_REQUEST['id'];
 if($_SESSION['username'])
 {
 $select = $b->select("app_apk","*","apk_id='$id'");
+$_SESSION['appid'] = $id;
 $rows = mysql_fetch_array($select);
 ?>
 <div class="container">               
@@ -23,7 +25,7 @@ if($msg!='')
    <div id="uploadedappdetail">
    <h3>APP Name: <?php echo $rows['app_name']; ?> </h3>
   <p>Application Type : <?php echo $rows['app_type']; ?></p>
-  <p>Application Id : <?php echo $rows['apk_id']; ?></p>
+  <p>Application Id : <?php echo $rows['apk_id'];?></p>
   <p>Version : <?php echo $rows['app_version']; ?></p>
   <p>Author :</p>
   <p>Description : <?php echo $rows['description']; ?></p>
@@ -35,17 +37,17 @@ if($msg!='')
             <div class="control-group">
             <div class="controls span2">
             <label class="checkbox">
-            <input type="checkbox" value="2.x" name="android[]" id="inlinecheckbox1">2.0/2.1 Eclair</label>
+            <input type="checkbox" value="1" name="android[]" id="inlinecheckbox1">2.0/2.1 Eclair</label>
             <label class="checkbox">
-            <input type="checkbox" value="2.2.x" name="android[]" id="inlinecheckbox1">2.2.x Froyo</label>
+            <input type="checkbox" value="1" name="android[]" id="inlinecheckbox1">2.2.x Froyo</label>
             <label class="checkbox">
-            <input type="checkbox" value="2.3.x" name="android[]" id="inlinecheckbox1">2.3.x Gingerbread</label>
+            <input type="checkbox" value="1" name="android[]" id="inlinecheckbox1">2.3.x Gingerbread</label>
             <label class="checkbox">
-            <input type="checkbox" value="3.x" name="android[]" id="inlinecheckbox1">3.x Honeycomb</label>
+            <input type="checkbox" value="1" name="android[]" id="inlinecheckbox1">3.x Honeycomb</label>
             <label class="checkbox">
-            <input type="checkbox" value="4.0.x" name="android[]" id="inlinecheckbox1">4.0.x Ice Cream Sandwich</label>
+            <input type="checkbox" value="1" name="android[]" id="inlinecheckbox1">4.0.x Ice Cream Sandwich</label>
             <label class="checkbox">
-            <input type="checkbox" value="4.1.x" name="android[]" id="inlinecheckbox1">4.1/4.2 Jelly Bean</label>
+            <input type="checkbox" value="1" name="android[]" id="inlinecheckbox1">4.1/4.2 Jelly Bean</label>
             <label class="checkbox">
             </div>
             </div>

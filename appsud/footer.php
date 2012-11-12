@@ -1,3 +1,30 @@
+<img src="img/vr_line.png" id="vertical-line" />
+  <div id="rightnav">
+    <div class="row">  
+<div class="span3" id="categories">  
+<ul class="nav nav-tabs nav-stacked">
+      <li class="divider-vertical"><a href="#">Games</a></li>
+      <li class="divider-vertical"><a href="#">Social Networking</a></li>
+            <li class="divider-vertical"><a href="#">Entertainment</a></li>
+            <li class="divider-vertical"><a href="#">Music</a></li>
+      <li class="divider-vertical"><a href="#">Lifestyle</a></li>
+            <li class="divider-vertical"><a href="#">News</a></li>
+            <li class="divider-vertical"><a href="#">Photos / Videos</a></li>
+      <li class="divider-vertical"><a href="#">Shopping</a></li>
+            <li class="divider-vertical"><a href="#">Sports</a></li>
+            <li class="divider-vertical"><a href="#">Food / Restaurant</a></li>
+            <li class="divider-vertical"><a href="#">Travel / Local</a></li>
+            <li class="divider-vertical"><a href="#">Utilities</a></li>
+            <li class="divider-vertical"><a href="#">Widgets</a></li>            
+            
+            
+            
+    </ul>
+  </div>
+</div>
+</div>
+</div>
+
 <!-- JavaScript at the bottom for fast page loading -->
 	
 	  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
@@ -31,43 +58,6 @@
 	
 	  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
 	       mathiasbynens.be/notes/async-analytics-snippet -->
-           
-<div class="container">
-	<div id="leftPanel"></div>
-	<div id="hr"></div>
-	<img src="img/vr_line.png" id="vertical-line" />
-	<div id="rightnav">
-		<div class="row">  
-<div class="span3">  
-<ul class="nav nav-tabs nav-stacked">
-			<li class="divider-vertical"><a href="#">Games</a></li>
-			<li class="divider-vertical"><a href="#">Social Networking</a></li>
-            <li class="divider-vertical"><a href="#">Music</a></li>
-            <li class="divider-vertical"><a href="#">Entertainment</a></li>
-			<li class="divider-vertical"><a href="#">Navigation / Search</a></li>
-            <li class="divider-vertical"><a href="#">Communication</a></li>
-            <li class="divider-vertical"><a href="#">News</a></li>
-			<li class="divider-vertical"><a href="#">Shopping</a></li>
-            <li class="divider-vertical"><a href="#">Banking / Finance</a></li>
-            <li class="divider-vertical"><a href="#">Dining / Restaurant</a></li>
-            <li class="divider-vertical"><a href="#">Food / Drink</a></li>
-            <li class="divider-vertical"><a href="#">Health</a></li>
-            <li class="divider-vertical"><a href="#">Sports</a></li>
-            <li class="divider-vertical"><a href="#">Productivity</a></li>
-            <li class="divider-vertical"><a href="#">Education / Learning</a></li>
-            <li class="divider-vertical"><a href="#">Travel</a></li>
-            <li class="divider-vertical"><a href="#">Weather</a></li>
-            
-            
-            
-		</ul>
-	</div>
-</div>
-</div>
-</div>
-           
-           
-<div class="container">
 	<footer id="footer">
 		<div id="hr">
 			<div id="footnav">
@@ -84,7 +74,6 @@
 			</div>
 		</div>
 	</footer>
-</div>
   <!-- A little ie7- magic -->
   <!--commented by ajai<script type="text/javascript"> $(function(){if($.browser.msie&&parseInt($.browser.version,10)===6){$('.row div[class^="span"]:last-child').addClass("last-child");$('[class="span"]').addClass("margin-left-20");$(':button[class="btn"], :reset[class="btn"], :submit[class="btn"], input[type="button"]').addClass("button-reset");$(":checkbox").addClass("input-checkbox");$('[class^="icon-"], [class=" icon-"]').addClass("icon-sprite");$(".pagination li:first-child a").addClass("pagination-first-child")}}) </script>-->
 </body>

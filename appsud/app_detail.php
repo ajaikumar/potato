@@ -1,5 +1,12 @@
 <?php
 include('header.php');
+$b=new connection;
+$b->connect();
+$appid = $_SESSION['appid'];
+$apkid = $_REQUEST['id'];
+$select = $b->select("app_apk","*","apk_id='$apkid'");
+if($_SESSION['username'])
+{
 ?>
            
            <div class="container">
@@ -42,6 +49,11 @@ include('header.php');
                     </div>
                     </div>
     
-    <?php
+<?php
 include('footer.php');
+}
+else
+{
+    header('location:loginsignup.php');
+}
 ?>

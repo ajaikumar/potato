@@ -2,8 +2,6 @@
 ob_start();
 session_start();
 include('model/allclasses.php');
-$obj=new connection();
-//$obj->connect;
 ?>
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
@@ -71,3 +69,7 @@ $obj=new connection();
       </ul>
     </div>
   </div>
+<div class="container">
+  <div id="leftPanel"></div>
+  <div id="hr"></div>
+  

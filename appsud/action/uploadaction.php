@@ -82,8 +82,6 @@ if(isset($_POST['upload']))
 		$insert =$b->insert("app_apk","reg_id,app_name,app_version,app_type,app_license,description,apk_name","'$id','$appname','$version','$apptype','$license','$description','$apkname'");
 		$id = mysql_insert_id();
 		header('location:../confirm_upload.php?id='.$id);
-
-		
 	}
 
 }

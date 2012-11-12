@@ -1,5 +1,5 @@
 #header-container{
-	background: #17bbf2; /* Old browsers */
+    background: #17bbf2; /* Old browsers */
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
 background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzE3YmJmMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjMDBiNGYxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNjklIiBzdG9wLWNvbG9yPSIjMDBiNWYxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzAlIiBzdG9wLWNvbG9yPSIjMDBiMmYxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzAlIiBzdG9wLWNvbG9yPSIjMDA4MGYxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNzElIiBzdG9wLWNvbG9yPSIjMDA3Y2YxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iOTklIiBzdG9wLWNvbG9yPSIjMDA3ZGYxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzUwYTZmNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
 background: -moz-linear-gradient(top,  #17bbf2 0%, #00b4f1 1%, #00b5f1 69%, #00b2f1 70%, #0080f1 70%, #007cf1 71%, #007df1 99%, #50a6f5 100%); /* FF3.6+ */
@@ -22,31 +22,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
     margin-left: 41px;
 }
 #tabs{
-	margin-top: 132px;
+    margin-top: 132px;
     margin-left: 120px;
 }
 
 .boldness{
-	color: white;
-	font-family: "Myriad web pro";
+    color: white;
+    font-family: "Myriad web pro";
 }
 
 #ratings{
-	margin-top: 30px;
-	margin-left: 163px;
+    margin-top: 30px;
+    margin-left: 163px;
 }
 
 #desired-apps{
     
     font-family: "Myriad web pro";
-	font-size: 30px;
-	font-weight: bold;
-	color: #FFFFFF;
-	float: right;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFFFFF;
+    float: right;
     margin-top: 30px;
     margin-right: 117px;
     padding: 40px;
 }
+
+/* Spec page section */
 
 #specpage{
     position:absolute;
@@ -55,6 +57,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
     margin-top:12%;
 }
 
+#specpage h3{
+    font-family: tahoma;
+    font-weight: bold;
+}
+
+#specpage h2{
+    font-family: tahoma;
+    font-weight: normal;
+    color: #309CFF;
+}
+
+
+#specpage hr{
+    width:700px;
+    color:;
+    margin:0;
+}
+
+/* App_deteail page style elements */
+ 
 #specpage .appdet{
     height:300px
     
@@ -97,37 +119,70 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
     
 } 
 
-#specpage h3{
-    font-family: tahoma;
-    font-weight: bold;
-}
+/* developer home page user option section */
 
-
-
-
-#specpage hr{
-    width:700px;
-    color:;
-    margin:0;
-}
-
-#editpagehead{
+#useroptions{
     position:absolute;
-    float:left;
-    width:200px;
-    margin-top:2%;
+    float:none;
+    margin-left:900px;
+    
 }
 
-#editpagehead h3{
-    font-family: tahoma;
-    font-weight: bold;
+
+
+/*spec page user panel section in developer_home */
+
+#specpage .userpanel{
+    height:400px
+    
 }
 
-#editpagehead hr{
-    width:700px;
-    color:;
-    margin:0;
+#specpage .userpanel .devtabs{
+    position: absolute;
+    float:none;
+    width: 700px;
+    margin-top: 20px;
+    margin-left: 0px;
+    
 }
+
+#specpage .userpanel .pic{
+    position: absolute;
+    float:  none;
+    margin-top: 80px;
+    margin-left: 500px;
+    
+}
+
+
+/*spec page upload application link section in Developer_home */
+
+#specpage .Uploadpglnk{
+    height: 100px;
+    position: absolute;
+    margin-top: auto;
+    width: 700px;
+    float:none;
+}
+
+#specpage .Uploadpglnk .btn {
+    position:absolute;
+    margin-left: 0px;
+    
+}
+
+/*spec page upload application link section in Developer_home */
+#specpage .uplodedapps{
+    position: absolute;
+    margin-top: 100px;
+    width: 700px;
+    height:auto;
+    float:none;
+}
+
+/*edit profile page */
+
+
 
 #leftpanel{
     float:left;
@@ -135,37 +190,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
     height: auto;
     }
     
-#notifications{
-    position:absolute;
-    float:left;
-    width:500px;
-    margin:10px;
-    padding: 2px;
-    text-align:center;
-    background-color:#E4EFF9;
-
-}
-
-#messages{
-    position:absolute;
-    float:left!important;
-    width:500px;
-    margin-top: 60px;
-    margin-left: .8%;
-    padding: 2px;
-    text-align:center;
-    background-color:#E4EFF9;
-
-}
 
 #vertical-line{
-    background-image:url('img/vr_line.png');
+    background-image: url('img/vr_line.png');
     background-repeat: repeat-y;
-    width:1px;
-    height:1024px;
-    margin-left: 75%!important;
-    margin-top: auto!important;
-    
+    width: 1px;
+    height: 1024px;
+    margin-left: 69%!important;
+    margin-top: -310px!important;
 }
 
 
@@ -279,6 +311,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
     height: 300px;
 }
 
+/* Imgae uploads edit profile page & confirm upload page */
+
+#imgupld1{
+    position:absolute;
+    float: none;
+    margin-top: 150px;
+    margin-left: 0px;
+    width: 300px;
+    height: 400px;
+    padding-bottom: 2px;        
+}
+
+#imgupld1 h3{
+    font-family: "Myriad web pro";
+    font-size: 20px;
+    text-align: left;
+    color:#007DF1;         
+}
+
 #imgupld2{
     position:absolute;
     float: left;
@@ -380,6 +431,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
     padding: 2em 1em;
 }
 
+#categories{
+    margin-top: -300px;
+    margin-left: -4px;
+}
+
+.app-details{
+    margin-top: -75px;
+}
+
+.single-app{
+    margin-top: 15px;
+}
+
 
 #hr{
     width:100%; 
@@ -389,3 +453,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
     border: none;
     padding-bottom: 0;
 }
+
+/* index.php */
+
+.app-banner{
+    width:80px;
+    height: 80px;
+}
+
+/* end of index.php*/
