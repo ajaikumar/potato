@@ -461,4 +461,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#17bbf2', end
     height: 80px;
 }
 
+.screenshots{
+    width: 300px;
+    height: 200px;
+}
+
+.propic{
+    position: absolute;
+    margin-left: 358px;
+    margin-top: -81px;
+}
+.username{
+    margin-left: 390px;
+}
+
 /* end of index.php*/

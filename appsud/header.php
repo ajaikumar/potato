@@ -33,6 +33,7 @@ include('model/allclasses.php');
        Modernizr enables HTML5 elements & feature detects for optimal performance.
        Create your own custom Modernizr build: www.modernizr.com/download/ -->
   <script src="extras/h5bp/js/libs/modernizr-2.5.3.min.js"></script>
+  <script src="js/jquery-1.8.3.js"></script>
 </head>
 <body>
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.

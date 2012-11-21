@@ -28,8 +28,9 @@ if($_SESSION['username'])
             </div>
         </div>
         <div id="photoupload">
-            <form action="" method="post" enctype="multipart/form-data">
-            <label for="photo">Upload Photo:</label>
+            <form action="action/editpropic.php" method="post" enctype="multipart/form-data">
+            <label for="photo">Edit profile Picture:</label>
+            <img src="<?php echo 'propic/'.$rows['propic']; ?>">
             <input type="file" name="file" id="file"/>
             <input type="submit" name="save" value="Save"/>
             </form>

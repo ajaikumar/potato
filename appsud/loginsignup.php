@@ -9,12 +9,15 @@ $msg = $_REQUEST['msg'];
 }
 if($msg == '')
 {
-  session_destroy();
+    unset($_SESSION['uname']);
+    unset($_SESSION['email']);
+    unset($_SESSION['usertype']);
+    unset($_SESSION['country']);
+    unset($_SESSION['phone']);
+    unset($_SESSION['website']);
 }
 
 ?>
-
-
 <div class="container">
                     <div id="loginreghead">
                         <h2>Already a member Log in, else Sign Up its free</h2>
@@ -36,7 +39,7 @@ if($msg == '')
     <h3>Developer Login</h3>
 
 <table border="0">
-<form method="POST" action="action/loginauth.php">
+<form method="POST" action="action/loginauth.php" id='formlogin'>
 <tr><td>Username</td><td>:</td><td><input type="text" name="uname" size="20" value="<?php echo isset($_SESSION['uname'])?$_SESSION['uname']:''; ?>"></td></tr>
 <tr><td>Password</td><td>:</td><td><input type="password" name="pass"></td></tr>
 <tr><td>&nbsp;</td><td>&nbsp;</td><td><input type="submit" value="Login" class="btn btn-primary" name="login"></td></tr>
@@ -48,10 +51,10 @@ if($msg == '')
         <div id="forms2">
         <div class="signup">
     <h3>Sign Up</h3>
-
+            <div id="error"></div>
             <table border="0">
-            <form method="POST" action="action/loginauth.php">
-            <tr><td>Username<input type="text" name="username" size="20" value="<?php echo isset($_SESSION['username'])?$_SESSION['username']:''; ?>"></td></tr>
+            <form method="POST" action="action/loginauth.php" enctype="multipart/form-data" >
+            <tr><td>Username<input id="username" type="text" name="username" size="20" value="<?php echo isset($_SESSION['uname'])?$_SESSION['uname']:''; ?>"></td></tr>
             <tr><td>Email<input type="text" name="emailid" value="<?php echo isset($_SESSION['email'])?$_SESSION['email']:'' ?>"></td></tr>
             <tr><td>New Password<input type="password" name="password" ></td></tr>
             <tr><td>Retype Password<input type="password" name="re_password"></td></tr>
@@ -311,7 +314,8 @@ if($msg == '')
 </select></td></tr>
             <tr><td>Phone<input type="text" name="phone" value="<?php echo isset($_SESSION['phone'])?$_SESSION['phone']:'' ?>"></td></tr>
             <tr><td>Website<input type="text" name="website" value="<?php echo isset($_SESSION['website'])?$_SESSION['website']:'' ?>"></td></tr>
-            <tr><td><input type="submit" value="Sign Up" name="signup" class="btn btn-primary"></td></tr>
+            <tr><td>Profile Picture<input type="file" name="propic" id="propic"> </td></tr>
+            <tr><td><input type="submit" id="submit" value="Sign Up" name="signup" class="btn btn-primary"></td></tr>
         </form>
     </table>
         </div>
@@ -326,3 +330,50 @@ if($msg == '')
 <?php
 include('footer.php');
 ?>
+
+
+<script>
+
+$('#submit').click(function(){
+    var err = $('#error').text();
+    if(err)
+    {
+        alert('false');
+        return false;
+    }
+    else
+    {
+        alert('true');
+        return true;
+    }
+    if($('#username').val() == '')
+    {
+        return false;
+    }
+    else
+        return true;
+});
+// function checkuname()
+// {
+//     var err = $('#error').text();
+//     if(err)
+//     {
+//         alert('error');
+//     }
+//     else
+//     {
+//         $('#formlogin').submit();
+//     }
+// }
+$('#username').bind('keyup',function(){
+    var username = $('#username').val();
+    $.ajax({
+            method:'post',
+            url:'ajax.php?username='+username,
+            success:function(data)
+            {
+                $('#error').text(data);
+            }
+    })
+});
+</script>

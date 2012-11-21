@@ -5,15 +5,14 @@ $b->connect();
 $appid = $_SESSION['appid'];
 $apkid = $_REQUEST['id'];
 $select = $b->select("app_apk","*","apk_id='$apkid'");
-if($_SESSION['username'])
-{
+$rows = mysql_fetch_array($select);
 ?>
            
            <div class="container">
                     <div id="leftPanel">
                      <div id="specpage">
                      <div class="appdet">
-                <h3>APP XX01</h3>
+                <h3><?php echo $rows['app_name']; ?></h3>
                 <div class="appdetails">
                 <ul class="nav nav-tabs">
                 <li><a href="#" data-toggle="tab">Description</a></li>
@@ -24,8 +23,9 @@ if($_SESSION['username'])
                 </div>
                 <div class="apimg">
                 <table border="0">
-                <tr><td><img src="appimage/01.jpg"/></td>
+                <tr><td><img class="screenshots" src="<?php echo 'screenshots/'.$rows['app_banner']; ?>"/></td>
                 </td></tr></table>
+                <a href="<?php echo 'apk/'.$rows['apk_name']; ?>" target="_blank" class="offset5"><ul class="btn btn-primary" >Download</ul></a>
                 </div>
                 </div>
                 <hr />
@@ -34,9 +34,9 @@ if($_SESSION['username'])
                         <div class="scrnshtimg">
                         <table>
                         <tr>
-                        <td><img src="appimage/01.jpg"/></td>
-                        <td><img src="appimage/01.jpg"/></td>
-                        <td><img src="appimage/01.jpg" /></td>
+                        <td><img class="screenshots" src="<?php echo 'screenshots/'.$rows['app_scr1']; ?>"/></td>
+                        <td><img class="screenshots" src="<?php echo 'screenshots/'.$rows['app_scr2']; ?>"/></td>
+                        <td><img class="screenshots" src="<?php echo 'screenshots/'.$rows['app_scr3']; ?>"/></td>
                         </tr></table></div>
                         <hr />
                         </div>
@@ -51,9 +51,6 @@ if($_SESSION['username'])
     
 <?php
 include('footer.php');
-}
-else
-{
-    header('location:loginsignup.php');
-}
+
+
 ?>

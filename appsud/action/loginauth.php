@@ -13,6 +13,30 @@ if(isset($_POST[signup]))
 	$phone = $_POST['phone'];
 	$website = $_POST['website'];
 	$a=1;
+	$target = '../propic/';
+	$allowed = array("jpg", "jpeg", "gif", "png");
+	if (($_FILES["propic"]["type"] == "image/gif")
+	|| ($_FILES["propic"]["type"] == "image/jpeg")
+	|| ($_FILES["propic"]["type"] == "image/png")
+	|| ($_FILES["propic"]["type"] == "image/pjpeg"))
+	{
+	  if ($_FILES["propic"]["error"] > 0)
+	    {
+	    $msg = $_FILES["propic"]["error"];
+	    $a=0;
+	    }
+	  else
+	    {
+	    	$extension = end(explode(".", $_FILES["propic"]["name"]));
+	    	$propic = rand().'.'.$extension;
+			move_uploaded_file($_FILES["propic"]["tmp_name"],$target.$propic);
+	    }
+	  }
+	else
+	  {
+	  $msg = "Invalid file";
+	  $a=0;
+	  }
 	if($username == '')
 	{
 		$msg="Enter username";	
@@ -60,7 +84,7 @@ if(isset($_POST[signup]))
 	}
 	if($a==0)
 	{
-		$_SESSION['username'] = $username;
+		$_SESSION['uname'] = $username;
 		$_SESSION['email'] = $email;
 		$_SESSION['usertype'] = $usertype;
 		$_SESSION['country'] = $country;
@@ -79,7 +103,7 @@ if(isset($_POST[signup]))
 		}
 		else
 		{
-			$insert =$b->insert("app_register","username,email,password,usertype,country,phone,website","'$username','$email','$password','$usertype','$country','$phone','$website'");
+			$insert =$b->insert("app_register","username,email,password,usertype,country,phone,website,propic","'$username','$email','$password','$usertype','$country','$phone','$website','$propic'");
 			$_SESSION['username'] = $username;
 			header('location:../developers_home.php');			
 		}
